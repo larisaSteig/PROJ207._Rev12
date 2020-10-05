@@ -1,0 +1,68 @@
+﻿@model Workshop5.Rev2.App.Models.PackageViewModel
+@{
+    ViewData["Title"] = "Booking";
+    var customerId = ViewBag.CustomerId;
+    var selectedPackages = ViewBag.selectedPackages;
+}
+
+<br />
+
+<div class="container border">
+    <p id="uxCongrats"class="text-center font-italic font-weight-bold text-danger"> Congratulations!<br/> Your booking has been confirmed.<br /> Please book with us again.</p>
+</div>
+<br />
+<div class="container border">
+    <h4 class="text-center"> Your purchase history with Us</h4>
+    <br />
+    <table class="table text-center table-hover table-responsive-md">
+        <thead class="bg-primary text-white">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PkgName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PkgStartDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PkgEndDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PkgBasePrice)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.selectedPackages)
+            {
+                <tr>
+                    <td>
+                        @item.PkgName
+                    </td>
+                    <td>
+                        @item.PkgStartDate.ToString("d")
+                    </td>
+                    <td>
+                        @item.PkgEndDate.ToString("d")
+                    </td>
+                    <td>
+                        $@Math.Round((item.PkgBasePrice), 2)
+                    </td>
+                </tr>
+            }
+            <tr>
+
+                <td colspan="3">
+                    <p class="text-center font-weight-bold">You have made a purchase amounting to a total of:</p>
+                </td>
+                <td>
+                    <p class="font-weight-bold text-danger">$@ViewBag.Total</p>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br />
+<div class="text-center">
+    <a href="~/Home/Index" class="btn btn-warning">Return to Home</></a>   
+</div>

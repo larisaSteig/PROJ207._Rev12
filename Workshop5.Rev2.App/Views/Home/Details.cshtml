@@ -1,0 +1,43 @@
+﻿@model Workshop5.Rev2.Data.Domain.Packages
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div>
+    <h4>Package Details</h4>
+    <hr />
+    <div class="card">
+        <img id="uxImageDisplay" src="@Url.Content(@Model.Photo)" alt="@Model.AlternativeText" style="max-width:400px; max-height:400px;" />
+        <div class="card-body">
+            <table id="uxDetailDisplay" class="table-bordered table col-sm-6">
+                <tr>
+                    <td> @Html.DisplayNameFor(model => model.PkgName)</td>
+                    <td> @Html.DisplayFor(model => model.PkgName)</td>
+                </tr>
+                <tr>
+                    <td> @Html.DisplayNameFor(model => model.PkgStartDate)</td>
+                    <td> @Html.DisplayFor(model => model.PkgStartDate)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.PkgEndDate)</td>
+                    <td>@Html.DisplayFor(model => model.PkgEndDate)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.PkgDesc)</td>
+                    <td>@Html.DisplayFor(model => model.PkgDesc)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.PkgBasePrice)</td>
+                    <td>@Html.DisplayFor(model => model.PkgBasePrice)</td>
+                </tr>
+
+            </table>
+            <div id="uxConfirm"class="text-center">
+                <span id="uxButton"class="btn btn-success">@Html.ActionLink("Confirm Booking", "Booking", "Bookings", new { Packageid = 4 })</span>
+                <a href="~/home/index" class="btn btn-warning">Return to Home</a>
+            </div>  
+        </div>
+    </div>
+</div>

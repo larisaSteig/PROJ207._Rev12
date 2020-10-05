@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Workshop5.Rev2.App.Models.PackageViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="hero">
+    <h2>Exceptional Travels from the Travel Experts</h2>
+    <p>Ideas for your next trip? Sign-up now!</p>
+    <a href="~/Account/Create" class="btn btn-danger col-md-3">Sign-Up</a>
+</div>
+
+<div class="index-main">
+    <h2 id="index-packages">Vacation Packages - Find your next destination!</h2>
+
+    <div class="vacationPackages" id="uXpackages">
+        @foreach (var item in Model)
+        {
+        <div class="packages col-md-6">
+            <img src="@Url.Content(item.Photo)" style="max-width:300px; max-height:300px;" />
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(modelItem => item.PkgName)</h5>
+                @Html.ActionLink("Details", "Details", new { id = item.PackageId })
+            </div>
+        </div>
+
+        }
+        <!-- The gallery will go here. See index-images.js to see how this happens -->
+    </div>
+</div>
+
+

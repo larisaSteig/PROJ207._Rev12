@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Workshop5.Rev2.Data.Domain.Packages>
+@{
+    ViewData["Title"] = "Details";
+    var x = new SelectList(Model, "PackageId", "PkgName");
+    var y = Model.First();
+}
+<br />
+
+
+<select id="uxPackages" asp-items="x"></select>
+<br />
+<br />
+<div id="uxDisplay":>
+    <br />
+    <partial name="_PackageDetails" model="@Model.First()" />
+</div>
+
+<script>
+    $(document).ready(function () {
+       // alert("WORKING!")
+        $("#uxPackages").change(function () {
+            var packageId = $("#uxPackages").val();
+            //$("#uxDisplay").html(id);
+            //AJAX methods
+            $.ajax({
+                method: 'GET',
+                url: '/Package/Data',
+                data: { id: packageId}
+            }).done(function (result, statusText, xhdr) {
+                $("#uxDisplay").html(result)
+            });// end of ajax
+        });// end change
+    }); // end doc ready
+</script>
+
