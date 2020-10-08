@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// Coded by: David Hahner
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
-
 
 namespace Workshop5.Rev2.App.Models
 {
@@ -34,15 +30,22 @@ namespace Workshop5.Rev2.App.Models
         [Display(Name = "Province")]
         public string CustProv { get; set; }
 
-        [Required(ErrorMessage = "Please Enter Your Postal Code")]
+        [Required]
         [Display(Name = "Postal Code")]
+        [RegularExpression(@"[ABCEGHJKLMNPRSTVXYabcdefghijklmnopqrstuvwxyz][0-9][ABCEGHJKLMNPRSTVWXYZabcdefghijklmnopqrstuvwxyz] ?[0-9][ABCEGHJKLMNPRSTVWXYZabcdefghijklmnopqrstuvwxyz][0-9]",
+            ErrorMessage = "Please enter a valid Postal Code")]
+        [StringLength(7, MinimumLength = 6, ErrorMessage = "Please enter a valid Postal Code")]
         public string CustPostal { get; set; }
 
-        [Required(ErrorMessage = "Please Enter Your Home Phone")]
+        [Required]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$",
+                            ErrorMessage = "Entered phone format is not valid.")]
         [Display(Name = "Home Phone:")]
         public string CustHomePhone { get; set; }
 
-        [Required(ErrorMessage = "Please Enter Your Business Phone")]
+        [Required]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$",
+                            ErrorMessage = "Entered phone format is not valid.")]
         [Display(Name = "Business Phone")]
         public string CustBusPhone { get; set; }
 

@@ -12,7 +12,7 @@ namespace Workshop5.Rev2.Data.Domain
             CreditCards = new HashSet<CreditCards>();
             CustomersRewards = new HashSet<CustomersRewards>();
         }
-
+        [Display(Name = "Customer Id")]
         public int CustomerId { get; set; }
         [Display(Name = "First Name")]
         public string CustFirstName { get; set; }

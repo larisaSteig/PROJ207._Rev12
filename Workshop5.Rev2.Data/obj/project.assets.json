@@ -5005,11 +5005,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev5\\Workshop5.Rev2.Data\\Workshop5.Rev2.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev12\\Workshop5.Rev2.Data\\Workshop5.Rev2.Data.csproj",
       "projectName": "Workshop5.Rev2.Data",
-      "projectPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev5\\Workshop5.Rev2.Data\\Workshop5.Rev2.Data.csproj",
+      "projectPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev12\\Workshop5.Rev2.Data\\Workshop5.Rev2.Data.csproj",
       "packagesPath": "C:\\Users\\mabservi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev5\\Workshop5.Rev2.Data\\obj\\",
+      "outputPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev12\\Workshop5.Rev2.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mabservi\\AppData\\Roaming\\NuGet\\NuGet.Config",

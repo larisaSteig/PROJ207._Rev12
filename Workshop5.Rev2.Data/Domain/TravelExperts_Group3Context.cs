@@ -1,6 +1,5 @@
-﻿using System;
+﻿//original SQL Script modified by David Hahner for username/password
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Workshop5.Rev2.Data.Domain
 {
@@ -40,8 +39,9 @@ namespace Workshop5.Rev2.Data.Domain
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=M-10M3-MJ05R7M7\\SQLEXPRESS;Database=TravelExperts_Group3;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=TravelExperts_Group3;Trusted_Connection=True;");
+                //optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=TravelExperts_Group3;Trusted_Connection=True;");
+                //optionsBuilder.UseSqlServer("Server=DAVES-LAPTOP;Database=TravelExperts_Group3;Trusted_Connection=True;");
             }
         }
 

@@ -1,12 +1,9 @@
 ﻿@model Workshop5.Rev2.Data.Domain.Packages
 
-@{
-    ViewData["Title"] = "Details";
-}
-
+@{ ViewData["Title"] = "Details"; }
 
 <div>
-    <h4>Package Details</h4>
+    <h1 id="uxPackageMessage">Package Details</h1>
     <hr />
     <div class="card">
         <img id="uxImageDisplay" src="@Url.Content(@Model.Photo)" alt="@Model.AlternativeText" style="max-width:400px; max-height:400px;" />
@@ -18,11 +15,13 @@
                 </tr>
                 <tr>
                     <td> @Html.DisplayNameFor(model => model.PkgStartDate)</td>
-                    <td> @Html.DisplayFor(model => model.PkgStartDate)</td>
+                    @*<td> @Html.DisplayFor(model => model.PkgStartDate)</td>*@
+                    <td>@Model.PkgStartDate.Value.ToString("d")</td>
                 </tr>
                 <tr>
                     <td>@Html.DisplayNameFor(model => model.PkgEndDate)</td>
-                    <td>@Html.DisplayFor(model => model.PkgEndDate)</td>
+                    @*<td>@Html.DisplayFor(model => model.PkgEndDate)</td>*@
+                    <td>@Model.PkgEndDate.Value.ToString("d")</td>
                 </tr>
                 <tr>
                     <td>@Html.DisplayNameFor(model => model.PkgDesc)</td>
@@ -32,12 +31,11 @@
                     <td>@Html.DisplayNameFor(model => model.PkgBasePrice)</td>
                     <td>@Html.DisplayFor(model => model.PkgBasePrice)</td>
                 </tr>
-
             </table>
-            <div id="uxConfirm"class="text-center">
-                <span id="uxButton"class="btn btn-success">@Html.ActionLink("Confirm Booking", "Booking", "Bookings", new { Packageid = 4 })</span>
+            <div id="uxConfirm" class="text-center">
+                <span id="uxButton" class="btn btn-success">@Html.ActionLink("Confirm Booking", "Booking", "Bookings", new { Packageid = Model.PackageId })</span>
                 <a href="~/home/index" class="btn btn-warning">Return to Home</a>
-            </div>  
+            </div>
         </div>
     </div>
 </div>

@@ -1,4 +1,5 @@
-﻿@model Workshop5.Rev2.Data.Domain.Customers
+﻿@*Coded by Larisa Steig*@
+@model Workshop5.Rev2.Data.Domain.Customers
 
 @{
     ViewData["Title"] = "Login";
@@ -18,9 +19,12 @@
                 <input asp-for="CustUserName" class="form-control" required/>
                 <span asp-validation-for="CustUserName" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div>
                 <label asp-for="CustPassword"  class="control-label" >Enter Password:</label>
-                <input asp-for="CustPassword" class="form-control" required/>
+                <div >
+                    @Html.PasswordFor(m=>m.CustPassword)
+                </div>
+                @*<input asp-for="CustPassword" class="form-control" required />*@
                 <span asp-validation-for="CustPassword" class="text-danger"></span>
             </div>
             <div class="form-group">

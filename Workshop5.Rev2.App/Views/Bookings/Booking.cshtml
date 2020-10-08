@@ -4,15 +4,13 @@
     var customerId = ViewBag.CustomerId;
     var selectedPackages = ViewBag.selectedPackages;
 }
-
 <br />
-
 <div class="container border">
-    <p id="uxCongrats"class="text-center font-italic font-weight-bold text-danger"> Congratulations!<br/> Your booking has been confirmed.<br /> Please book with us again.</p>
+    <p id="uxCongrats" class="text-center font-italic font-weight-bold text-danger"> Congratulations!<br /> Your booking has been confirmed.<br /> Please book with us again.</p>
 </div>
 <br />
 <div class="container border">
-    <h4 class="text-center"> Your purchase history with Us</h4>
+    <h4 class="text-center"> Your purchase history with us:</h4>
     <br />
     <table class="table text-center table-hover table-responsive-md">
         <thead class="bg-primary text-white">
@@ -50,13 +48,11 @@
                 </tr>
             }
             <tr>
-
                 <td colspan="3">
                     <p class="text-center font-weight-bold">You have made a purchase amounting to a total of:</p>
                 </td>
                 <td>
                     <p class="font-weight-bold text-danger">$@ViewBag.Total</p>
-
                 </td>
             </tr>
         </tbody>
@@ -64,5 +60,5 @@
 </div>
 <br />
 <div class="text-center">
-    <a href="~/Home/Index" class="btn btn-warning">Return to Home</></a>   
+    <a href="~/Home/Index" class="btn btn-warning">Return to Home</></a>
 </div>

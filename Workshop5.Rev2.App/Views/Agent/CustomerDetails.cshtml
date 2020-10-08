@@ -1,0 +1,36 @@
+﻿@*coded by Larisa Steig*@
+@model IEnumerable<Workshop5.Rev2.Data.Domain.Customers>
+
+@{
+    ViewData["Title"] = "CustomerDetails";
+    var x = new SelectList(Model, "CustomerId", "CustEmail");
+    var y = Model.First();
+}
+<br />
+
+<h1>Customer Details</h1>
+<br />
+<select id="uxCustomers" asp-items="x"></select>
+<br />
+<br />
+<div id="uxDisplay" :>
+    <br />
+    <partial name="_CustomerDetails" model="@Model.First()" />
+</div>
+
+<script>
+    $(document).ready(function () {
+        // alert("WORKING!")
+        $("#uxCustomers").change(function () {
+            var packageId = $("#uxCustomers").val();
+            //$("#uxDisplay").html(id);
+            //AJAX methods
+            $.ajax({
+                method: 'GET',
+                url: '/Agent/CustomerData',
+                data: { id: packageId }
+            }).done(function (result, statusText, xhdr) {
+                $("#uxDisplay").html(result)
+            });// end of ajax
+        });// end change
+    }); // end doc ready</script>

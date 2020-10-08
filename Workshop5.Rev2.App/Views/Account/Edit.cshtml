@@ -1,80 +1,82 @@
-﻿@model Workshop5.Rev2.Data.Domain.Customers
+﻿@*Placeholders added by David Hahner*@
+
+@*Coded by: Laris Steig*@
+@model Workshop5.Rev2.Data.Domain.Customers
 
 @{
     ViewData["Title"] = "Edit";
 }
 
-
 <center>
-    <h4>Update Customer Information</h4>
+    <h4>Update Customer Information:</h4>
     <hr />
 </center>
-    <div class="row justify-content-center">
-        <div class="form-group col-md-4 col-md-offset-5 align-center ">
-            <form asp-action="Edit">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="CustFirstName" class="control-label"></label>
-                    <input asp-for="CustFirstName" class="form-control" />
-                    <span asp-validation-for="CustFirstName" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CustLastName" class="control-label"></label>
-                    <input asp-for="CustLastName" class="form-control" />
-                    <span asp-validation-for="CustLastName" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CustAddress" class="control-label"></label>
-                    <input asp-for="CustAddress" class="form-control" />
-                    <span asp-validation-for="CustAddress" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CustCity" class="control-label"></label>
-                    <input asp-for="CustCity" class="form-control" />
-                    <span asp-validation-for="CustCity" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CustProv" class="control-label"></label>
-                    <input asp-for="CustProv" class="form-control" />
-                    <span asp-validation-for="CustProv" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CustPostal" class="control-label"></label>
-                    <input asp-for="CustPostal" class="form-control" />
-                    <span asp-validation-for="CustPostal" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CustCountry" class="control-label"></label>
-                    <input asp-for="CustCountry" class="form-control" />
-                    <span asp-validation-for="CustCountry" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CustHomePhone" class="control-label"></label>
-                    <input asp-for="CustHomePhone" class="form-control" />
-                    <span asp-validation-for="CustHomePhone" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CustBusPhone" class="control-label"></label>
-                    <input asp-for="CustBusPhone" class="form-control" />
-                    <span asp-validation-for="CustBusPhone" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CustEmail" class="control-label"></label>
-                    <input asp-for="CustEmail" class="form-control" />
-                    <span asp-validation-for="CustEmail" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CustUserName" class="control-label"></label>
-                    <input asp-for="CustUserName" class="form-control" />
-                    <span asp-validation-for="CustUserName" class="text-danger"></span>
-                </div>
 
-                <div class="form-group">
-                    <input type="submit" value="Update Info" class="btn btn-primary" />
-                    <a href="~/home/index" class="text-center btn btn-warning justify-content-center">Return to Home</a>
-                </div>
-            </form>
-        </div>
+<div class="row justify-content-center">
+    <div class="form-group col-md-4 col-md-offset-5 align-center ">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label"></label>
+                <input asp-for="CustomerId" class="form-control" readonly />
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustFirstName" class="control-label"></label>
+                <input asp-for="CustFirstName" class="form-control" />
+                <span asp-validation-for="CustFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustLastName" class="control-label"></label>
+                <input asp-for="CustLastName" class="form-control" />
+                <span asp-validation-for="CustLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustAddress" class="control-label"></label>
+                <input asp-for="CustAddress" class="form-control" />
+                <span asp-validation-for="CustAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustCity" class="control-label"></label>
+                <input asp-for="CustCity" class="form-control" />
+                <span asp-validation-for="CustCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustProv" class="control-label"></label>
+                <input asp-for="CustProv" class="form-control" />
+                <span asp-validation-for="CustProv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustPostal" class="control-label"></label>
+                <input asp-for="CustPostal" placeholder="A1A1A1" class="form-control" />
+                <span asp-validation-for="CustPostal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustHomePhone" class="control-label"></label>
+                <input asp-for="CustHomePhone" placeholder="###-###-####" class="form-control" />
+                <span asp-validation-for="CustHomePhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustBusPhone" class="control-label"></label>
+                <input asp-for="CustBusPhone" placeholder="###-###-####" class="form-control" />
+                <span asp-validation-for="CustBusPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustEmail" class="control-label"></label>
+                <input asp-for="CustEmail" class="form-control" />
+                <span asp-validation-for="CustEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustUserName" class="control-label"></label>
+                <input asp-for="CustUserName" class="form-control" />
+                <span asp-validation-for="CustUserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update Info" class="btn btn-primary" />
+                <a href="~/home/index" class="text-center btn btn-warning justify-content-center">Return to Home</a>
+            </div>
+        </form>
     </div>
+</div>
 
 

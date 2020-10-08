@@ -11,7 +11,7 @@ namespace Workshop5.Rev2.Data.Domain
             Bookings = new HashSet<Bookings>();
             PackagesProductsSuppliers = new HashSet<PackagesProductsSuppliers>();
         }
-
+        [Display(Name = "Package ID")]
         public int PackageId { get; set; }
         [Display(Name = "Package Name")]
         public string PkgName { get; set; }
@@ -23,6 +23,7 @@ namespace Workshop5.Rev2.Data.Domain
         public string PkgDesc { get; set; }
         [Display(Name = "Price")]
         public decimal PkgBasePrice { get; set; }
+        [Display(Name = "Agency Commission")]
         public decimal? PkgAgencyCommission { get; set; }
         public string Photo { get; set; }
         public string AlternativeText { get; set; }

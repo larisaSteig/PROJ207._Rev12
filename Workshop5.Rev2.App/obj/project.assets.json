@@ -8280,11 +8280,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev5\\Workshop5.Rev2.App\\Workshop5.Rev2.App.csproj",
+      "projectUniqueName": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev12\\Workshop5.Rev2.App\\Workshop5.Rev2.App.csproj",
       "projectName": "Workshop5.Rev2.App",
-      "projectPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev5\\Workshop5.Rev2.App\\Workshop5.Rev2.App.csproj",
+      "projectPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev12\\Workshop5.Rev2.App\\Workshop5.Rev2.App.csproj",
       "packagesPath": "C:\\Users\\mabservi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev5\\Workshop5.Rev2.App\\obj\\",
+      "outputPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev12\\Workshop5.Rev2.App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mabservi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8300,11 +8300,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev5\\Workshop5.Rev2.BLL\\Workshop5.Rev2.BLL.csproj": {
-              "projectPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev5\\Workshop5.Rev2.BLL\\Workshop5.Rev2.BLL.csproj"
+            "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev12\\Workshop5.Rev2.BLL\\Workshop5.Rev2.BLL.csproj": {
+              "projectPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev12\\Workshop5.Rev2.BLL\\Workshop5.Rev2.BLL.csproj"
             },
-            "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev5\\Workshop5.Rev2.Data\\Workshop5.Rev2.Data.csproj": {
-              "projectPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev5\\Workshop5.Rev2.Data\\Workshop5.Rev2.Data.csproj"
+            "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev12\\Workshop5.Rev2.Data\\Workshop5.Rev2.Data.csproj": {
+              "projectPath": "C:\\Users\\Manpower\\Desktop\\ASP_NET class\\_Workshop5\\PROJ207._Rev12\\Workshop5.Rev2.Data\\Workshop5.Rev2.Data.csproj"
             }
           }
         }

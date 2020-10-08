@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Workshop5.Rev2.BLL;
 using Workshop5.Rev2.App.Models;
+using Workshop5.Rev2.Data.Domain;
 
 namespace Workshop5.Rev2.App.Controllers
-{
+{ /*Package Controller is coded by Larisa Steig*/
     public class PackageController : Controller
     {
         // GET: PackageController
@@ -34,21 +32,21 @@ namespace Workshop5.Rev2.App.Controllers
 
         }
 
-       
-        // GET: PackageController/Create
+
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: PackageController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Packages package)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                //call the OwnerManager to add
+                PackageManager.Add(package);
+
+                return RedirectToAction(nameof(Details));
             }
             catch
             {
@@ -56,20 +54,21 @@ namespace Workshop5.Rev2.App.Controllers
             }
         }
 
-        // GET: PackageController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var package = PackageManager.Find(id);
+            return View(package);
         }
 
-        // POST: PackageController/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Packages package)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                //call the OwnerManager to add
+                PackageManager.update(package);
+
+                return RedirectToAction(nameof(Details));
             }
             catch
             {
@@ -77,44 +76,6 @@ namespace Workshop5.Rev2.App.Controllers
             }
         }
 
-        // GET: PackageController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: PackageController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //public IActionResult Index()
-        //{
-        //    var properties = PackageManager.GetAll();
-        //    var viewModels = properties.Select(p => new PackageViewModel
-        //    {
-        //        PackageId = p.PackageId,
-        //        PkgName = p.PkgName,
-        //        PkgStartDate = p.PkgStartDate,
-        //        PkgEndDate = p.PkgEndDate,
-        //        PkgDesc = p.PkgDesc,
-        //        PkgBasePrice = p.PkgBasePrice,
-        //        PkgAgencyCommission = p.PkgAgencyCommission,
-        //        //Bookings =p.Bookings.BookingId,
-        //        //PackagesProductsSuppliers =p.PackagesProductsSuppliers
-        //    });
-        //    return View(viewModels);
-        //}
 
         public IActionResult PackageDetail()
         {

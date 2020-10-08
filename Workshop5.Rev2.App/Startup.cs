@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,13 +23,16 @@ namespace Workshop5.Rev2.App
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opt => opt.LoginPath = "/Account/Login");
+          
             services.AddDbContext<TravelExperts_Group3Context>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("InventoryConnection"));
             });
+            // Reg String coded by David Hahner
             services.AddDbContext<Registration>(options => options
                     .UseSqlServer(Configuration
                     .GetConnectionString("InventoryConnection")));
+
             services.AddControllersWithViews();
         }
 

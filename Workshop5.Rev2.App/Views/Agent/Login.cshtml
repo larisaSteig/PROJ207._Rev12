@@ -1,0 +1,42 @@
+﻿@*coded by Larisa Steig*@
+@model Workshop5.Rev2.Data.Domain.Agents
+
+@{
+    ViewData["Title"] = "Login";
+}
+<br />
+<br />
+
+
+
+
+<div class="row justify-content-center">
+    <div class="form-group col-md-4 col-md-offset-5 align-center ">
+        <h1>Agent Login:</h1>
+        <br />
+        <form asp-action="Login">
+            <div class="form-group">
+                <label asp-for="AgtEmail" class="control-label">Enter Username:</label>
+                <input asp-for="AgtEmail" class="form-control" required />
+                <span asp-validation-for="AgtEmail" class="text-danger"></span>
+            </div>
+           
+            <div>
+                <label asp-for="AgtPassword" class="control-label">Enter Password:</label>
+                <div>
+                    @Html.PasswordFor(m => m.AgtPassword)
+                </div>
+                @*<input asp-for="CustPassword" class="form-control" required />*@
+                <span asp-validation-for="AgtPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+                <a href="~/home/index" class="text-center btn btn-warning justify-content-center">Return to Home</a>
+            </div>
+        </form>
+        <br />
+
+    </div>
+</div>
+
+

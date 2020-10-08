@@ -1,8 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿//coded by: David Hahner
+
+using Microsoft.EntityFrameworkCore;
 
 namespace Workshop5.Rev2.App.Models
 {
@@ -11,7 +9,6 @@ namespace Workshop5.Rev2.App.Models
         public Registration(DbContextOptions<Registration> options) : base(options)
         {
         }
-
         public DbSet<RegistrationViewModel> Customers { get; set; }
     }
 }
